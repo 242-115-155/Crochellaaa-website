@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crochet Studio</title>
+    <style>
+        html {
+    scroll-behavior: smooth;
+}
+        /* General Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
+        body { background-color: #fffaf9; color: #333; line-height: 1.6; }
+        
+        /* Header */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: #fff; }
+        .logo { font-size: 24px; font-weight: bold; color: #d4a5a5; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { text-decoration: none; color: #333; font-weight: 500; }
+
+        /* Hero Section */
+        .hero { 
+            height: 500px; 
+            background-size: cover; 
+            background-position: center; 
+            display: flex; 
+            align-items: center; 
+            padding-left: 50px;
+        }
+        .hero-content { max-width: 500px; background: rgba(255, 255, 255, 0.8); padding: 30px; border-radius: 10px; }
+        .hero h1 { font-size: 48px; color: #555; margin-bottom: 10px; }
+        .hero-buttons button { padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px; margin-right: 10px; }
+        
+        /* Featured Products Section */
+        .featured { padding: 50px; text-align: center; }
+        .product-grid { display: flex; gap: 20px; justify-content: center; margin-top: 30px; }
+        .product-card { background: #fff; padding: 20px; border: 1px solid #eee; border-radius: 10px; width: 250px; }
+        .product-card img { width: 100%; height: 200px; object-fit: cover; border-radius: 5px; }
+
+        /* Footer */
+        footer { background: #fff; padding: 50px; text-align: center; border-top: 1px solid #eee; }
+    </style>
+</head>
+<body>
+
+    <header>
+        
+    <div class="logo">Crochellaaa</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" style="background-image: url('images/home.png');">
+        <div class="hero-content">
+            <h1>Handmade Crochet Collection</h1>
+            <p>Unique handcrafted products made with extra love and care for every occasion.</p>
+            
+<div class="hero-buttons">
+    <a href="shop.html">
+    <button style="background: #d4a5a5; color: white;">Explore Collection</button>
+    </a>
+</div>
+        </div>
+    </section>
+
+    <section class="featured">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="images/product1.png" alt="Tulip Bag Charm">
+                <h3>Tulip Bag Charm</h3>
+                <p>৳120</p>
+                <a href="https://ig.me/m/crochellaaa_" target="_blank" class="order-btn" style="text-decoration: none; padding: 5px 10px; cursor: pointer; border-radius: 5px; font-size: 13px; background: #d4a5a5; color: white; border: none;">
+                    Inbox to Order
+                </a>
+            </div>
+            <!-- Repeat for other products -->
+             <div class="product-card">
+                <img src="images/product2.png" alt="Butterfly Keychain">
+                <h3>Butterfly Keychain</h3>
+                <p>৳60</p>
+                <a href="https://ig.me/m/crochellaaa_" target="_blank" class="order-btn" style="text-decoration: none; padding: 5px 10px; cursor: pointer; border-radius: 5px; font-size: 13px; background: #d4a5a5; color: white; border: none;">
+                    Inbox to Order
+                </a>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product3.png" alt="Star-Moon Keychain">
+                <h3>Star-Moon Keychain</h3>
+                <p>৳120</p>
+                <a href="https://ig.me/m/crochellaaa_" target="_blank" class="order-btn" style="text-decoration: none; padding: 5px 10px; cursor: pointer; border-radius: 5px; font-size: 13px; background: #d4a5a5; color: white; border: none;">
+                    Inbox to Order
+                </a>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product4.png" alt="Gajra">
+                <h3>Gajra-2Pcs</h3>
+                <p>৳250</p>
+                <a href="https://ig.me/m/crochellaaa_" target="_blank" class="order-btn" style="text-decoration: none; padding: 5px 10px; cursor: pointer; border-radius: 5px; font-size: 13px; background: #d4a5a5; color: white; border: none;">
+                    Inbox to Order
+                </a>
+            </div>
+
+            <div class="product-card">
+                <img src="images/product5.png" alt="Sunflower Bag Charm">
+                <h3>Sunflower BagCharm</h3>
+                <p>৳120</p>
+                <a href="https://ig.me/m/crochellaaa_" target="_blank" class="order-btn" style="text-decoration: none; padding: 5px 10px; cursor: pointer; border-radius: 5px; font-size: 13px; background: #d4a5a5; color: white; border: none;">
+                    Inbox to Order
+                </a>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <div style="text-align: center; margin-bottom: 50px;">
+    <a href="shop.html">
+    <button style="padding: 12px 30px; background-color: #d4a5a5; color: white; border: none; border-radius: 5px; cursor: pointer;">View All Products</button>
+    </a>
+</div>
+
+    <!-- Value Proposition Section -->
+    <section style="padding: 40px 50px; display: flex; justify-content: space-between; border-top: 1px solid #eee; border-bottom: 1px solid #eee; background-color: #fffaf9;">
+    
+    <div style="text-align: center; width: 30%;">
+        <img src="images/icon1.png" style="width: 50px; margin-bottom:">
+        <h4 style="margin-bottom: 5px;">Handmade Quality</h4>
+        <p style="font-size: 14px;">Each product is carefully handmade</p>
+        <p style="font-size: 14px;">with love and care</p>
+    </div>
+
+    <div style="text-align: center; width: 30%;">
+        <img src="images/icon2.png" style="width: 50px; margin-bottom: 10px;">
+        <h4 style="margin-bottom: 5px;">Fast Delivery</h4>
+        <p style="font-size: 14px;">We deliver your orders</p>
+        <p style="font-size: 14px;">quickly and safely.</p>
+    </div>
+
+    <div style="text-align: center; width: 30%;">
+        <img src="images/icon3.png" style="width: 50px; margin-bottom: 10px;">
+        <h4 style="margin-bottom: 5px;">Custom Orders</h4>
+        <p style="font-size: 14px;">Get custom crochet items</p>
+        <p style="font-size: 14px;">made just for you.</p>
+    </div>
+
+</section>
+
+    <!-- About Section -->
+    <section id="about" style="padding: 50px; display: flex; align-items: center; gap: 50px;">
+        <img src="images/about.png" alt="About Us" style="width: 400px; border-radius: 10px;">
+        <div>
+            <h5 style="color: #a87272; font-size: 14px; text-transform: uppercase; margin-bottom: 5px;">About Us</h5>
+            <h2>Every Stitch Tells a Story.</h2>
+            <p>Our crochet products are carefully handmade</p> 
+            <p>using premium yarn and attention to detail.</p>
+            <p>Bringing warmth, style and happiness to</p>
+            <p>your everyday life.</p>
+        </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section id="contact" style="padding: 50px; text-align: center;">
+        <h2>Follow Us on Instagram</h2>
+        <div style="display: flex; gap: 10px; justify-content: center; margin-top: 20px;">
+            <img src="images/product1.png" style="width: 150px;">
+            <img src="images/product2.png" style="width: 150px;">
+            <img src="images/product3.png" style="width: 150px;">
+            <img src="images/product4.png" style="width: 150px;">
+            <img src="images/product5.png" style="width: 150px;">
+        </div>
+    </section>
+
+    <footer style="background: #fff; padding: 50px 20px; border-top: 1px solid #eee; text-align: center;">
+    <div style="margin-bottom: 20px;">
+        <h3 style="color: #a87272; margin-bottom: 10px;">Contact Us</h3>
+        <p>Based in Sylhet, Bangladesh</p>
+        <p>Follow us on Instagram for orders:</p>
+        <a href="https://www.instagram.com/crochellaaa__?igsh=M29uZ2p0cTk3Z3V2" target="_blank" style="text-decoration: none; color: #a87272; font-weight: bold; font-size: 18px;">
+            @crochellaaa__
+        </a>
+    </div>
+    <div style="border-top: 1px solid #eee; padding-top: 20px; color: #888; font-size: 14px;">
+        <p>&copy; 2026 Crochellaaa__ All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
