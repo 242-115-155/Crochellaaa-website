@@ -187,20 +187,31 @@ nav ul li a {
         width: 100% !important;
     }
 
-    
-    .about-section, .about-container, .features-section {
+    .about-section {
         display: flex !important;
-        flex-direction: column !important; 
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 20px !important;
         width: 100% !important;
-        max-width: 100% !important;
-        padding: 20px 15px !important;
         box-sizing: border-box !important;
     }
 
-    .about-img, .about-text {
+    
+    .about-text, .about-content {
         width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 0 15px 0 !important;
+        padding: 10px !important;
+        display: block !important; 
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    
+    .about-text p {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+        color: #333 !important;
+        margin-bottom: 10px !important;
     }
 
     
