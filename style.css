@@ -117,47 +117,98 @@ nav ul li a {
 }
 
 /* Responsive - Mobile View */
-@media screen and (max-width: 600px) {
-    header {
-        padding: 20px;
-        flex-direction: column;
-    }
+
+@media screen and (max-width: 768px) {
     
-    .hero {
-        padding-left: 20px;
-        padding-right: 20px;
+    html, body {
+        width: 100% !important;
+        overflow-x: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
-    .product-grid {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: space-between !important;
-        padding: 5px !important;
-    }
-
-    .product-card {
-        width: 47% !important;
-        margin-bottom: 15px !important;
-        border: 1px solid #eee !important;
-        padding: 5px !important;
+    
+    .hero, .hero-content, .main-banner {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 20px 10px !important;
         box-sizing: border-box !important;
     }
 
-    .product-card img {
+    
+    .product-grid {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: space-between !important;
         width: 100% !important;
-        height: 120px !important;
-        object-fit: cover !important;
-        display: block !important;
+        padding: 10px !important;
+        box-sizing: border-box !important;
+        gap: 8px !important;
     }
 
-    nav ul {
-        display: flex !important;
-        justify-content: center !important;
-        gap: 10px !important;
-        padding: 0 !important;
+    
+    .product-card {
+        width: 30% !important; 
+        flex: 0 0 30% !important;
+        margin: 0 0 15px 0 !important;
+        padding: 6px !important;
+        box-sizing: border-box !important;
+        border: 1px solid #f0f0f0 !important;
+        border-radius: 8px !important;
+        text-align: center !important;
     }
+
+    
+    .product-card img {
+        width: 100% !important;
+        height: 90px !important; 
+        object-fit: cover !important;
+        border-radius: 4px !important;
+    }
+
     
     .product-card h3 {
-        font-size: 14px;
+        font-size: 11px !important;
+        margin: 5px 0 !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important; 
+    }
+
+    .product-card p, .product-card .price {
+        font-size: 11px !important;
+        margin: 3px 0 !important;
+    }
+
+    .product-card button, .product-card .btn {
+        font-size: 9px !important;
+        padding: 4px 2px !important;
+        width: 100% !important;
+    }
+
+    
+    .about-section, .about-container, .features-section {
+        display: flex !important;
+        flex-direction: column !important; 
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 20px 15px !important;
+        box-sizing: border-box !important;
+    }
+
+    .about-img, .about-text {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 0 15px 0 !important;
+    }
+
+    
+    .features-grid, .instagram-grid {
+        display: flex !important;
+        flex-wrap: nowrap !important; 
+        overflow-x: auto !important; 
+        width: 100% !important;
+        gap: 10px !important;
     }
 }
