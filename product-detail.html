@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Crochellaaa</title>
+    <style>
+        /* Header */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 50px; background: #fff; }
+        .logo { font-size: 24px; font-weight: bold; color: #d4a5a5; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 20px; }
+        nav ul li a { text-decoration: none; color: #333; font-weight: 500; }
+
+        body { font-family: sans-serif; margin: 0; padding: 20px; background-color: #fdfbf7; color: #333; }
+        .product-container { max-width: 500px; margin: 20px auto; padding: 20px; background: #fdfbf7; }
+        .img-card { position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        #p-img { width: 100%; display: block; border-radius: 20px; }
+        h1 { font-size: 32px; color: #333; margin: 20px 0 5px 0; }
+        #p-price { font-size: 28px; color: #a87272; font-weight: bold; margin: 0; }
+        #p-desc { color: #555; line-height: 1.6; margin: 20px 0; }
+        .custom-box { border: 1px dashed #a87272; padding: 15px; border-radius: 10px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+        .order-btn { display: block; width: 100%; padding: 15px; background: #a87272; color: white; text-align: center; text-decoration: none; border-radius: 10px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+    <header>
+        
+    <div class="logo">Crochellaaa</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<div class="product-container">
+    <a href="shop.html" style="text-decoration: none; color: #a87272; font-size: 14px;">&larr; Back</a>
+    
+    <div class="img-card">
+        <img id="p-img" src="" alt="Product">
+    </div>
+
+    <h1 id="p-name">Loading...</h1>
+    <p id="p-price"></p>
+    <p id="p-desc"></p>
+
+    <div class="custom-box">
+        <span>🎨</span>
+        <p style="margin: 0; font-size: 14px;">Customization available in any color to match your personal style.</p>
+    </div>
+
+    <a href="#" id="m-order" class="order-btn">🛒 Order Now</a>
+</div>
+
+<script>
+    // ১৮টি প্রোডাক্টের ডাটাবেজ
+    const products = {
+        1: { name: "Tulip Bag Charm", price: "৳120", img: "images/product1.png", desc: "Bring a touch of handmade elegance to your everyday style with our beautiful Tulip Bag. Carefully crocheted with premium-quality yarn. Its unique tulip-inspired design makes it a lovely accessory for casual outings or a thoughtful handmade gift." },
+        2: { name: "Butterfly Keychain", price: "৳60", img: "images/product2.png", desc: "Bring a touch of handmade elegance to your everyday style with our beautiful Butterfly Keychain. Carefully crocheted with premium-quality yarn." },
+        3: { name: "Star-Moon Keychain", price: "৳120", img: "images/product3.png", desc: "Bring a touch of handmade elegance to your everyday style with our beautiful Star-Moon Keychain. Carefully crocheted with premium-quality yarn." },
+        4: { name: "Gajra-2Pcs", price: "৳250", img: "images/product4.png", desc: "Bring a touch of handmade elegance to your everyday style with our beautiful Gajra. Carefully crocheted with premium-quality yarn." },
+        5: { name: "Sunflower Bag Charm", price: "৳120", img: "images/product5.png", desc: "Bring a touch of handmade elegance to your everyday style with our beautiful Sunflower Bag Charm. Carefully crocheted with premium-quality yarn. Its unique sunflower-inspired design makes it a lovely accessory for casual outings or a thoughtful handmade gift." },
+        6: { name: "Bow Keychain", price: "৳90", img: "images/product6.png", desc: "Bring a touch of handmade elegance to your everyday style with our beautiful Bow Keychain. Carefully crocheted with premium-quality yarn." },
+        7: { name: "Flower Keychain", price: "৳90", img: "images/product7.png", desc: "Bring a touch of handmade elegance to your everyday style with our beautiful Flower Keychain. Carefully crocheted with premium-quality yarn." },
+        8: { name: "Cherry Bag Charm", price: "৳130", img: "images/product8.png", desc: "Bring a touch of handmade elegance to your everyday style with our beautiful Cherry Bag Charm. Carefully crocheted with premium-quality yarn." },
+        9: { name: "Sunflower Hair Clip", price: "৳60", img: "images/product9.png", desc: "Bring a touch of handmade elegance to your everyday style with our beautiful Sunflower Hair Clip. Carefully crocheted with premium-quality yarn." },
+        10: { name: "Bow Hair Clip", price: "৳190", img: "images/product10.png", desc: "Bring a touch of handmade elegance to your everyday style with our beautiful Bow Hair Accessory. Carefully crocheted with premium-quality yarn." },
+        11: { name: "Tulip Bouquet Keychain", price: "৳190", img: "images/product11.png", desc: "Bring a touch of handmade elegance to your everyday style with our beautiful Tulip Bouquet Keycahain. Carefully crocheted with premium-quality yarn." },
+        12: { name: "Heart Hair Clip", price: "৳190", img: "images/product12.png", desc: "Bring a touch of handmade elegance to your everyday style with our beautiful Heart shape hair accessory. Carefully crocheted with premium-quality yarn." },
+        13: { name: "Tulip Stick-1Pcs", price: "৳160", img: "images/product13.png", desc: "Brighten any space with our handmade Crochet Tulip Stick, carefully crafted with soft premium yarn for a timeless, elegant look. Perfect for gifting, home décor, or creating a beautiful bouquet." },
+        14: { name: "Sunflower Stick-1Pcs", price: "৳160", img: "images/product14.png", desc: "Brighten any space with our handmade Crochet Sunflower Stick, carefully crafted with soft premium yarn for a timeless, elegant look. Perfect for gifting, home décor, or creating a beautiful bouquet." },
+        15: { name: "Rose Stick-1Pcs", price: "৳180", img: "images/product15.png", desc: "Brighten any space with our handmade Crochet Rose Stick, carefully crafted with soft premium yarn for a timeless, elegant look. Perfect for gifting, home décor, or creating a beautiful bouquet." },
+        16: { name: "Headband", price: "৳100", img: "images/product16.png", desc: "Add a touch of handmade charm to your look with our beautifully crocheted Floral Headband. Soft, lightweight, and comfortable for everyday wear." },
+        17: { name: "Mini Flower Bouquet", price: "৳100", img: "images/product17.png", desc: "Celebrate every special moment with our handcrafted Mini Flower Bouquet, beautifully crocheted with premium-quality yarn for a lasting keepsake. Perfect for gifting, home décor, or special occasions." },
+        18: { name: "Mini Rose Bouquet", price: "৳100", img: "images/product18.png", desc: "Celebrate every special moment with our handcrafted Mini Rose Bouquet, beautifully crocheted with premium-quality yarn for a lasting keepsake. Perfect for gifting, home décor, or special occasions." }
+    };
+
+    // URL থেকে আইডি শনাক্ত করা[cite: 1]
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+
+    if (id && products[id]) {
+        document.getElementById('p-name').innerText = products[id].name;
+        document.getElementById('p-price').innerText = products[id].price;
+        document.getElementById('p-img').src = products[id].img;
+        document.getElementById('p-desc').innerText = products[id].desc;
+        document.getElementById('m-order').href = "https://ig.me/m/crochellaaa__";
+    } else {
+        document.getElementById('p-name').innerText = "Product Not Found";
+    }
+</script>
+
+<!-- Value Proposition Section -->
+    <section style="padding: 40px 50px; display: flex; justify-content: space-between; border-top: 1px solid #eee; border-bottom: 1px solid #eee; background-color: #fffaf9;">
+    
+    <div style="text-align: center; width: 30%;">
+        <img src="images/icon1.png" style="width: 50px; margin-bottom:">
+        <h4 style="margin-bottom: 5px;">Handmade Quality</h4>
+        <p style="font-size: 14px;">Each product is carefully handmade</p>
+        <p style="font-size: 14px;">with love and care</p>
+    </div>
+
+    <div style="text-align: center; width: 30%;">
+        <img src="images/icon2.png" style="width: 50px; margin-bottom: 10px;">
+        <h4 style="margin-bottom: 5px;">Fast Delivery</h4>
+        <p style="font-size: 14px;">We deliver your orders</p>
+        <p style="font-size: 14px;">quickly and safely.</p>
+    </div>
+
+    <div style="text-align: center; width: 30%;">
+        <img src="images/icon3.png" style="width: 50px; margin-bottom: 10px;">
+        <h4 style="margin-bottom: 5px;">Custom Orders</h4>
+        <p style="font-size: 14px;">Get custom crochet items</p>
+        <p style="font-size: 14px;">made just for you.</p>
+    </div>
+
+</section>
+
+    <!-- About Section -->
+<section id="about" style="padding: 20px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 20px;">
+    <img src="images/about.png" alt="About Us" style="width: 100%; max-width: 400px; border-radius: 10px;">
+    <div style="flex: 1; min-width: 300px; text-align: center;">
+        <h5 style="color: #a87272; font-size: 14px; text-transform: uppercase; margin-bottom: 5px;">About Us</h5>
+        <h2 style="font-size: 24px; margin: 10px 0;">Every Stitch Tells A Story</h2>
+        <p style="margin: 5px 0;">Our crochet products are carefully handmade</p>
+        <p style="margin: 5px 0;">using premium yarn and attention to detail.</p>
+        <p style="margin: 5px 0;">Bringing warmth, style and happiness to</p>
+        <p style="margin: 5px 0;">your everyday life.</p>
+    </div>
+</section>
+
+    <!-- Instagram Section -->
+    <section id="contact" style="padding: 50px; text-align: center;">
+        <h2>Follow Us on Instagram</h2>
+        <div style="display: flex; gap: 10px; justify-content: center; margin-top: 20px;">
+            <img src="images/product1.png" style="width: 150px;">
+            <img src="images/product2.png" style="width: 150px;">
+            <img src="images/product3.png" style="width: 150px;">
+            <img src="images/product4.png" style="width: 150px;">
+            <img src="images/product5.png" style="width: 150px;">
+        </div>
+    </section>
+
+    <footer style="background: #fff; padding: 50px 20px; border-top: 1px solid #eee; text-align: center;">
+    <div style="margin-bottom: 20px;">
+        <h3 style="color: #a87272; margin-bottom: 10px;">Contact Us</h3>
+        <p>Based in Sylhet, Bangladesh</p>
+        <p>Follow us on Instagram for orders:</p>
+        <a href="https://www.instagram.com/crochellaaa__?igsh=M29uZ2p0cTk3Z3V2" target="_blank" style="text-decoration: none; color: #a87272; font-weight: bold; font-size: 18px;">
+            @crochellaaa__
+        </a>
+    </div>
+    <div style="border-top: 1px solid #eee; padding-top: 20px; color: #888; font-size: 14px;">
+        <p>&copy; 2026 Crochellaaa__ All Rights Reserved.</p>
+    </div>
+</footer>
+</body>
+</html>
