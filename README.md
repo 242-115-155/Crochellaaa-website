@@ -35,7 +35,8 @@ Crochellaaa/
 
 ## 📸 Screenshots
 
-[Home Page](https://github.com/242-115-155/Crochellaaa-website/blob/main/screenshots/home.png)
+### Home Page
+![Home Page](https://github.com/242-115-155/Crochellaaa-website/blob/main/screenshots/home.png)
 
 ## 📖 About
 
